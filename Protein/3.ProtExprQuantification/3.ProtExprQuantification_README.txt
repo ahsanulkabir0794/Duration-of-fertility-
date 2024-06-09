@@ -1,0 +1,57 @@
+蛋白表达水平的分析：
+
+结果文件展示：
+
+    1.all_sample.fa               所有鉴定到蛋白的序列文件
+    2.all_sample.xls              所有鉴定到蛋白的定量结果
+    3.cv_analysis.{pdf,png}       所有样品重复性CV的展示图，其中pdf为高清图(若无生物学重复，则无CV图）
+    4.PCA.{pdf,png}               蛋白PCA图(若无生物学重复，则无PCA图）
+    5.Pep_pro.xlsx                蛋白与肽段鉴定信息
+===========================================================================
+
+表头说明：
+1.all_sample.xls：
+
+    protein                       鉴定到蛋白序列的ID
+    Description                   蛋白描述    
+    Gene                          蛋白对应的基因名称
+                        
+注：Gene后面的列为不同样品的表达情况；
+
+
+2.Pep_pro.xlsx表中Peptide/Proteins表的表头信息注释
+
+Peptide
+
+    Confidence：肽段可信度，High(绿色)：FDR（strict）<0.01
+    Sequence：肽段氨基酸序列
+    Annotated Sequence：多肽序列，包括在蛋白质中前后氨基酸
+    Qvality PEP：肽段后验证错误率
+    Qvality q-value：肽段q值
+    PSMs：该肽段包含的肽段匹配数目
+    Master Protein Accessions：master protein 的特征性编号
+    Positions in Master Proteins：该肽段在master protein的位置
+    Missed Cleavages：酶漏切位点数目
+    Sequence Length：肽段序列长度
+    RT [min] (by Search Engine): Sequest HT ：保留时间
+    Abundances (Normalized)：该肽段的丰度标准化，校正实验偏差
+    Abundance：该肽段的丰度值
+
+Proteins
+
+    Protein FDR Confidence：蛋白可信度，High：FDR（strict）<0.01
+    Accession：蛋白ID
+    Exp. q-value: 搜索时，其匹配度用 q 值来代表，值越小代表可信度越高
+    Sum PEP Score：所有 PSM 的 PEP 值负对数的加和
+    Coverage [%]：蛋白序列中氨基酸覆盖度
+    Peptides：鉴定到不同肽段的总数目
+    PSMs：肽段匹配到二级谱图的数目
+    Unique Peptides：特异性肽段数目
+    AAs：氨基酸数目
+    MW [kDa]:蛋白分子量
+    calc. pI:蛋白等电点
+    Score Sequest HT:HT：Sequest HT 对蛋白匹配度的打分，分数越高可信度越高
+    Razor Peptides：与其他蛋白共享的多肽数目
+    Abundances (Normalized)：该蛋白的丰度标准化，校正实验偏差
+    Abundance：该蛋白的丰度值
+
